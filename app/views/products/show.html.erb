@@ -1,0 +1,15 @@
+<h1><%= @product.title.capitalize %></h1>
+
+<div>
+  <%= image_tag(@product.image_url, width: "300") %>
+</div>
+<div>
+  <p>
+    The price is: $<%= @product.price %>.
+  </p>
+</div>
+<div>
+  <p>
+    Description: <%= @product.description %>.
+  </p>
+</div>
