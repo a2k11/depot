@@ -1,18 +1,5 @@
 <%= form_for(@product) do |f| %>
-  <% if @product.errors.any? %>
-    <div>
-      <h2><%= pluralize(@product.errors.count, "error") %>
-      prohibitedthis product from being saved:</h2>
-      <ul>
-        <% @product.errors.full_messages.each do |message| %>
-          <li>
-            <%= msg %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+  <%= render partial: "application/form_errors", locals: { object: @product } %>
   <div class="field">
     <%= f.label :title %>
     <br>
